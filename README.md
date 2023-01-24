@@ -1,1 +1,2 @@
-# CSC2463-Spring-2023
+# Programming Digital Media
+
