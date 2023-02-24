@@ -1,14 +1,11 @@
 # Programming Digital Media
 
 Projects from Programming Digital Media class at Louisiana State University, Spring 2023
-
--  Starter template 
-   - [download](https://downgit.github.io/#/home?url=https://github.com/tatecarson/LSU-PDM-Spring-2021/tree/main/Week_1_T/starter-template) 
-   - [p5 editor](https://editor.p5js.org/tcarso2/sketches/3Gs60W1g_)
   
 ---
 ## Topics Covered
 ### p5.js
+- [p5 editor](https://editor.p5js.org/tcarso2/sketches/3Gs60W1g_)
 
 ### Tone.js
 - Web audio basics and sound file players
@@ -20,7 +17,6 @@ Projects from Programming Digital Media class at Louisiana State University, Spr
 - Rhythm / Scales / Tuning / Distributed smartphone music
 
 ### Arduino
--
 * Digital out - [notes](Hardware_Week_1_Th)
     * Blink - blink an LED [[video](https://www.youtube.com/watch?v=5vkuxBmWNDo), [code](https://www.arduino.cc/en/Tutorial/Blink), [circuit diagram](Hardware_Week_1_Th/LED_Diagram_bb.jpg)]
     * Morse code introduction - how to do the morse code assignment. [[video](https://youtu.be/18gWlNBlRoQ)]
@@ -47,13 +43,10 @@ Projects from Programming Digital Media class at Louisiana State University, Spr
   * Paint game with Arduino [[video](https://youtu.be/9-AXZToU-BM)]
 
 
-### Digital Audio
+### Extra Information
 
 - [Digital Sound and Music](http://digitalsoundandmusic.com/curriculum/) - explanations and definitions of all things digital sound
 - [PDM Online Textbook](https://pdm.lsupathways.org/) - in development for highschool class but covers all necessary material
-
-### JS Basics
-
 - [freeCodeCamp](https://www.freecodecamp.org/)
 - [codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 - [MDN web docs Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - includes some tutorials and the standard javascript reference 
