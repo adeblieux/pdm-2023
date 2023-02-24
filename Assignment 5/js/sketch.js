@@ -1,20 +1,19 @@
 let sounds = new Tone.Players({
 
-  "bird call": "sounds/bird_call.mp3",
-  "cat purring": "sounds/cat_purr.mp3",
-  "game start": "sounds/game-start.mp3",
-  "walking on grass": "sounds/grass_walking.mp3",
-  "wood chopping": "sounds/woodchopping.mp3"
+  "wtdd" : "sounds/birdcall.mp3",
+  "boom" : "sounds/catpurr.mp3",
+  "pipe" : "sounds/gamestart.mp3",
+  "ben" : "sounds/walkgrass.mp3"
 
-})
+});
 
 const delay = new Tone.FeedbackDelay("8n", 0.5);
 
-let soundNames = ["bird call", "cat purring", "game start", "walking on grass", "wood chopping"];
+let soundNames = ["wtdd", "boom", "pipe", "ben"];
 let buttons = [];
 
 let dSlider;
-let fSlider;
+let pSlider;
 
 function setup() {
   createCanvas(400, 400);
@@ -23,7 +22,7 @@ function setup() {
 
   soundNames.forEach((word, index) => {
     buttons[index] = createButton(word);
-    buttons[index].position(160, 80 + index*50);
+    buttons[index].position(165, 75 + index*50);
     buttons[index].mousePressed( () => buttonSound(word))
   })
 
@@ -41,16 +40,18 @@ function setup() {
 
 function draw() {
   background(random(255),random(255),random(255));
-  frameRate(.5);
+  frameRate(1);
   textAlign(CENTER);
   fill(255);
-  textSize(30);
-  textFont("Times New Roman");
-  stroke(3);
-  strokeWeight(3);
+  textSize(20);
+  textFont("Comic Sans");
+  stroke(0);
+  strokeWeight(0.5);
   text("Press buttons to play sound.", 200, 50);
-  text("Delay", 65, 390);
-  text("Feedback", 200, 390);
+  text("Delay", 30, 395);
+  text("Feedback", 180, 395);
+  textSize(12);
+  text("Be cautious at maximum values!", 320, 395);
 
 }
 
