@@ -1,15 +1,16 @@
 let sounds = new Tone.Players({
 
-  "wtdd" : "sounds/birdcall.mp3",
-  "boom" : "sounds/catpurr.mp3",
-  "pipe" : "sounds/gamestart.mp3",
-  "ben" : "sounds/walkgrass.mp3"
+  "bird call" : "sounds/birdcall.mp3",
+  "cat purr" : "sounds/catpurr.mp3",
+  "game start" : "sounds/gamestart.mp3",
+  "chopping wood" : "sounds/woodchop.mp3",
+  "walking on grass" : "sounds/walkgrass.mp3"
 
 });
 
 const delay = new Tone.FeedbackDelay("8n", 0.5);
 
-let soundNames = ["wtdd", "boom", "pipe", "ben"];
+let soundNames = ["bird call", "cat purr", "game start", "chopping wood", "walking on grass"];
 let buttons = [];
 
 let dSlider;
@@ -22,7 +23,7 @@ function setup() {
 
   soundNames.forEach((word, index) => {
     buttons[index] = createButton(word);
-    buttons[index].position(165, 75 + index*50);
+    buttons[index].position(165, 100 + index*50);
     buttons[index].mousePressed( () => buttonSound(word))
   })
 
@@ -40,19 +41,15 @@ function setup() {
 
 function draw() {
   background(random(255),random(255),random(255));
-  frameRate(1);
+  frameRate(.5);
   textAlign(CENTER);
   fill(255);
-  textSize(20);
-  textFont("Comic Sans");
+  textSize(25);
   stroke(0);
-  strokeWeight(0.5);
+  strokeWeight(3);
   text("Press buttons to play sound.", 200, 50);
-  text("Delay", 30, 395);
-  text("Feedback", 180, 395);
-  textSize(12);
-  text("Be cautious at maximum values!", 320, 395);
-
+  text("Delay", 65, 390);
+  text("Feedback", 195, 390);
 }
 
 function buttonSound(whichSound){
