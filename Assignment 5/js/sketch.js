@@ -47,10 +47,10 @@ function draw() {
   textSize(30);
   textFont("Times New Roman");
   stroke(3);
-  strokeWeight(0.5);
+  strokeWeight(3);
   text("Press buttons to play sound.", 200, 50);
-  text("Delay", 65, 395);
-  text("Feedback", 200, 395);
+  text("Delay", 65, 390);
+  text("Feedback", 200, 390);
 
 }
 
