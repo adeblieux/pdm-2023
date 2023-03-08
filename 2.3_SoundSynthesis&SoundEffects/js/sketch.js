@@ -22,7 +22,7 @@ function setup(){
   }).toDestination();
   
   reverb = new Tone.Reverb({
-    decay: .05,
+    decay: 0,
     wet: 0.5
   }).toDestination();
 
