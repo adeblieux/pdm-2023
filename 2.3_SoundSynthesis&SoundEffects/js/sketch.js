@@ -1,5 +1,5 @@
 var bomb, boom2, synth, reverb, chorus, autowah, bgm;
-var textInfo = "Click the mouse button for explosion.";
+var textInfo = "Click the mouse button for explosions.";
 
 function preload(){
 	bomb = loadImage('assets/bomb.jpg')
