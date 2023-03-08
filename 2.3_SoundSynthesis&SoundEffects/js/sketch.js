@@ -14,28 +14,28 @@ function setup(){
   synth = new Tone.MembraneSynth({
     pitchDecay: 0.05,
     envelope: {
-      attack: 0.01, 
-      decay: 0.01, 
-      sustain: .5, 
-      release: 0.5 
+      attack: 0.001, 
+      decay: 0.1, 
+      sustain: 0, 
+      release: 0.2 
     }
   }).toDestination();
   
   reverb = new Tone.Reverb({
-    decay: 7,
-    wet: 1
+    decay: 5,
+    wet: 0.5
   }).toDestination();
 
   chorus = new Tone.Chorus({
     frequency: 1,
-    delayTime: 2,
+    delayTime: 2.5,
     wet: 0.5
   }).toDestination();
 
   autowah = new Tone.AutoWah({
-    octaves: 0,
-    Q: 10,
-    wet: 0.2
+    octaves: 1,
+    Q: 9,
+    wet: 0.3
   }).toDestination();
 
   synth.connect(reverb).connect(chorus).connect(autowah);
