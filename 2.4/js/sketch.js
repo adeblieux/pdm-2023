@@ -1,105 +1,129 @@
-var colorRed = '#FF0000';
-var colorOrange = '#FF8000';
-var colorYellow = '#FFFF00';
-var colorGreen = '#008000';
-var colorCyan = '#00FFFF';
-var colorBlue = '#0000FF';
-var colorMagenta = '#FF00FF';
-var colorBrown = '#663300';
-var colorWhite = '#FFFFFF';
-var colorBlack = '#000000';
-var colorChoice = '#FF0000';
-var lineThickness = 12;
-var mouseClick = false;
 
-function setup() {
-	createCanvas(1300, 550);
+let flag = true;
+let currentNote = "F#4";
+
+const synth = new Tone.PolySynth();
+const synth2 = new Tone.PolySynth();
+
+let notes = {
+  '1': 'F#3',
+  '2': 'G#3',
+  '3': 'C#4',
+  '4': 'B3',
+  '5': 'D#4',
+  '6': 'F#4',
+  'a': 'F#4',
+  's': 'G#4',
+  'd': 'A#4',
+  'f': 'C#5',
+  'g': 'D#5',
+  'h': 'F#5',
+  'j': 'G#5',
+  'k': 'A#5',
+  'l': 'C#6',
+  'i': 'D#6'
 }
 
-function clicked(){
-	if (mouseIsPressed){
-		mouseClick = true;
-	}
-	else{
-		mouseClick = false;
-	}   return false;
+let colorList = 
+  { '#ff0000': 'F#4',
+    '#ffa500': 'G#4',
+    '#ffff00': 'A#4',
+    '#39ff14': 'C#5',
+    '#00ffff': 'D#5',
+    '#0000ff': 'F#5',
+    '#ff00ff': 'G#5',
+    '#76472d': 'A#5',
+    '#ffffff': 'C#6',
+    '#000000': 'D#6'};
+
+let slider;
+
+const now = Tone.now();
+const delay = new Tone.FeedbackDelay("5n", 0.5);
+const tremolo = new Tone.Tremolo(5, 0.75);
+
+var Fs_chord = ["F#3", "G#3", "C#4"];
+var B_chord = ["B3", "D#4", "F#4"];
+var pianoPart = new Tone.Part(function(time, chord) {
+    synth2.triggerAttackRelease(chord, "1n", time, 0.25);
+  }, 
+  [
+    ["0:0", Fs_chord],
+    ["0:8", Fs_chord],
+    ["0:16", B_chord],
+    ["0:24", B_chord],
+  ]).start();
+  pianoPart.loop = true;
+  pianoPart.loopEnd = "8m";
+
+function setup(){
+  createCanvas(windowWidth,windowHeight);
+  pianoPart.start();
+  Tone.Transport.start();
+  synth2.toDestination();
+  synth.connect(tremolo);
+  tremolo.toDestination().start();  
 }
-	
-function draw() {
-   noStroke();
-   fill(colorRed);
-   rect(0, 0, 25, 25);
-   fill(colorOrange);
-   rect(0, 25, 25, 25);
-   fill(colorYellow);
-   rect(0, 50, 25, 25);
-   fill(colorGreen);
-   rect(0, 75, 25, 25);
-   fill(colorCyan);
-   rect(0, 100, 25, 25);
-   fill(colorBlue);
-   rect(0, 125, 25, 25);
-   fill(colorMagenta);
-   rect(0, 150, 25, 25);
-   fill(colorBrown);
-   rect(0, 175, 25, 25);
-   fill(colorWhite);
-   rect(0, 200, 25, 25);
-   fill(colorBlack);
-   rect(0, 225, 25, 25);
 
-   // Brush Shape + Size
-   ellipse(12, 256, 12, 12);
-   ellipse(12, 275, 20, 20);
-   ellipse(12, 300, 28, 28);
+function draw(){
+  strokeWeight(0);
+  let colorArr = 
+    [ "#FF0000", '#ffa500', '#ffff00',
+      '#39FF14', '#00ffff', '#0000ff', 
+      '#ff00ff', '#76472d', '#ffffff', '#000000'];
+  let squareSize = (height/2) / colorArr.length;
+      
+  if(flag){
+    currentColor = color(colorArr[colorArr.length - 1]);  
+  }
 
-   // Line Thickness Check
-   if (mouseX >= 0 && mouseX <= 12 && mouseY >= 250 && mouseY <= 275 && mouseClick == true){
-         lineThickness = 12;
-   }
-   if (mouseX >= 0 && mouseX <= 20 && mouseY >= 300 && mouseY <= 325 && mouseClick == true){
-         lineThickness = 20;
-   }
-   if (mouseX >= 0 && mouseX <= 28 && mouseY >= 350 && mouseY <= 375 && mouseClick == true){
-         lineThickness = 28;
-   }
+  createPallete(colorArr);  
+  paint(currentColor);
 
-   // Line Colors Check
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 0 && mouseY <= 25 && mouseClick == true){
-   		colorChoice = colorRed;
-   }
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 25 && mouseY <= 50 && mouseClick == true){
-   		colorChoice = colorOrange;
-   }
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 50 && mouseY <= 75 && mouseClick == true){
-   		colorChoice = colorYellow;
-   }
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 75 && mouseY <= 100 && mouseClick == true){
-   		colorChoice = colorGreen;
-   }
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 100 && mouseY <= 125 && mouseClick == true){
-   		colorChoice = colorCyan;
-   }
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 125 && mouseY <= 150 && mouseClick == true){
-   		colorChoice = colorBlue;
-   }
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 150 && mouseY <= 175 && mouseClick == true){
-   		colorChoice = colorMagenta;
-   }
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 175 && mouseY <= 200 && mouseClick == true) {
-   		colorChoice = colorBrown;
-   }
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 200 && mouseY <= 225 && mouseClick == true){
-   		colorChoice = colorWhite;
-   }
-   if (mouseX >= 0 && mouseX <= 25 && mouseY >= 225 && mouseY <= 250 && mouseClick == true){
-   		colorChoice = colorBlack;
-   }
-
-  if(mouseIsPressed){
-   	strokeWeight(lineThickness);
-   	stroke(colorChoice);
-   	line(pmouseX,pmouseY,mouseX,mouseY);
- 	}  	
-   clicked();
+  if(mouseX < squareSize && mouseIsPressed){
+    synth.triggerRelease(currentNote);
+    currentColor = selectColor(squareSize, colorArr);
+    currentNote = colorList[currentColor.toString('#rrggbb')];
+    flag = false;
+    synth.triggerAttack(currentNote, '16n');    
+  }
 }
+
+function mousePressed(){
+  synth.triggerAttack(currentNote);
+}
+
+function mouseReleased(){
+  synth.triggerRelease(currentNote);
+}
+
+function createPallete(colorArray){
+  let y = 0;
+  let squareSize = (height/2) / colorArray.length;
+  let currentColor = color(0);
+  
+  for(let i = 0; i < colorArray.length; i++){
+    currentColor = color(colorArray[i]);
+    fill(currentColor);
+    square(0, y, squareSize);
+    y = y + squareSize;
+  }
+   
+}
+
+function paint(colorSelected){
+    strokeWeight(5);
+    stroke(colorSelected);
+    if(mouseIsPressed){
+      line(mouseX, mouseY, pmouseX, pmouseY);
+    }
+    tremolo.frequency.value = (mouseX / 250) + 0.1;
+  }
+  
+function selectColor(squareSize, colorArr){
+  let hoveredSquare = floor(mouseY / squareSize);
+  let chosenColor = colorArr[hoveredSquare];  
+  let c = color(chosenColor);
+  return c;
+}
+
