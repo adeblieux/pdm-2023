@@ -122,7 +122,8 @@ function paint(colorSelected){
   
 function selectColor(squareSize, colorArr){
   let hoveredSquare = floor(mouseY / squareSize);
-  let chosenColor = colorArr[hoveredSquare];  
+  let chosenColor = colorArr[hoveredSquare];
+  
   let c = color(chosenColor);
   return c;
 }
