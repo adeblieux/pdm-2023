@@ -7,6 +7,10 @@ Highlight of Projects from Programming Digital Media class at Louisiana State Un
   * Graphics and gameplay made using p5.js.
   * Synthesized background music, sound effects, etc. made using Tone.js.
 
+### [Boom!](https://adeblieux.github.io/pdm-2023/2.3_SoundSynthesis&SoundEffects/)
+   * A test demo for Tone.js synth and custom sound effects.
+   * Made using p5.js and Tone.js.
+
 ### [Paint App](https://adeblieux.github.io/pdm-2023/1.2/)
    * A browser app that allows you to draw images using a mouse input, ala MS Paint.
    * Features multiple colors and brush sizes.
