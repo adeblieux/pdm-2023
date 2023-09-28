@@ -1,7 +1,12 @@
 # Programming Digital Media
 
-Projects from Programming Digital Media class at Louisiana State University, Spring 2023
-  
+Highlight of Projects from Programming Digital Media class at Louisiana State University, Spring 2023
+
+### [Paint App](https://adeblieux.github.io/pdm-2023/1.2/)
+   * A browser app that allows you to draw images using a mouse input, ala MS Paint.
+   * Features multiple colors and brush sizes.
+   * Made using p5.js.
+
 ---
 
 
