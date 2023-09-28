@@ -2,6 +2,11 @@
 
 Highlight of Projects from Programming Digital Media class at Louisiana State University, Spring 2023
 
+### [Bug Squish](https://adeblieux.github.io/pdm-2023/1.4/)
+  * A browser game in which you try to squish all the moving bugs in the time allotted.
+  * Graphics and gameplay made using p5.js.
+  * Synthesized background music, sound effects, etc. made using Tone.js.
+
 ### [Paint App](https://adeblieux.github.io/pdm-2023/1.2/)
    * A browser app that allows you to draw images using a mouse input, ala MS Paint.
    * Features multiple colors and brush sizes.
