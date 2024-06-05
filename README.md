@@ -1,23 +1,33 @@
+Here's a more organized and visually appealing version of your markup file:
+
 # Programming Digital Media
 
-Highlight of Projects from Programming Digital Media class at Louisiana State University, Spring 2023
-
-### [Bug Squish](https://adeblieux.github.io/pdm-2023/1.4/)
-  * A browser game in which you try to squish all the moving bugs in the time allotted.
-  * Graphics and gameplay made using p5.js.
-  * Synthesized background music, sound effects, etc. made using Tone.js.
-
-### [Boom!](https://adeblieux.github.io/pdm-2023/2.3_SoundSynthesis&SoundEffects/)
-   * A test demo for Tone.js synth and custom sound effects.
-   * Made using p5.js and Tone.js.
-
-### [Paint App](https://adeblieux.github.io/pdm-2023/1.2/)
-   * A browser app that allows you to draw images using a mouse input, ala MS Paint.
-   * Features multiple colors and brush sizes.
-   * Made using p5.js.
+## Project Highlights
+### Louisiana State University, Spring 2023
 
 ---
 
+### [Bug Squish](https://adeblieux.github.io/pdm-2023/1.4/)
+  * A browser game where you squish all the moving bugs within the allotted time.
+  * **Technologies Used:** 
+    * Graphics and gameplay: p5.js
+    * Background music and sound effects: Tone.js
+
+### [Boom!](https://adeblieux.github.io/pdm-2023/2.3_SoundSynthesis&SoundEffects/)
+   * A test demo for Tone.js synth and custom sound effects.
+   * **Technologies Used:**
+     * p5.js
+     * Tone.js
+
+### [Paint App](https://adeblieux.github.io/pdm-2023/1.2/)
+   * A browser app that allows drawing images with mouse input, similar to MS Paint.
+   * **Features:**
+     * Multiple colors
+     * Various brush sizes
+   * **Technologies Used:**
+     * p5.js
+
+---
 
 ## Topics Covered
 
@@ -33,10 +43,14 @@ Highlight of Projects from Programming Digital Media class at Louisiana State Un
 - Sound Effects and Sequencers
 - Rhythm / Scales / Tuning / Distributed smartphone music
 
-### Extra Information
+---
 
-- [Digital Sound and Music](http://digitalsoundandmusic.com/curriculum/) - explanations and definitions of all things digital sound
-- [PDM Online Textbook](https://pdm.lsupathways.org/) - in development for highschool class but covers all necessary material
-- [MDN web docs Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - includes some tutorials and the standard javascript reference 
+## Extra Information
 
-https://adeblieux.github.io/pdm-2023/
+- [Digital Sound and Music](http://digitalsoundandmusic.com/curriculum/) - Explanations and definitions of all things digital sound.
+- [PDM Online Textbook](https://pdm.lsupathways.org/) - In development for a high school class but covers all necessary material.
+- [MDN Web Docs JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Includes tutorials and the standard JavaScript reference.
+
+---
+
+[View the Projects](https://adeblieux.github.io/pdm-2023/)
