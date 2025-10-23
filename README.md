@@ -1,6 +1,8 @@
 # Programming Digital Media
 ## Project Highlights
 
+Highlight of Projects from Programming Digital Media class at Louisiana State University, Spring 2023
+
 ### [Bug Squish](https://adeblieux.github.io/pdm-2023/1.4/)
   * A browser game where you squish all the moving bugs within the allotted time.
    * **Technologies Used:** p5.js, Tone.js
@@ -18,6 +20,8 @@
 
 ---
 
+   * 
+---
 ## Topics Covered
 
 ### p5.js
